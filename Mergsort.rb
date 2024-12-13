@@ -1,6 +1,7 @@
 class Marge
+  
   attr_accessor :arr
-
+  #initialize and call method to store value
   def initialize
     @arr=to_getArray
   end
@@ -39,7 +40,7 @@ class Marge
       arr
     end
 
-
+    #merge Array in single Array
     def merge(arr,low,mid,high)
       n1=mid-low+1
       n2=high-mid
@@ -55,7 +56,7 @@ class Marge
       end
       
       l,r,k=0,0,low
-  
+      #Swap value on left to right side in base of and base logical operator
       while l<n1 && r<n2
          if left[l]<=right[r]
            arr[k]=left[l]
@@ -66,13 +67,13 @@ class Marge
          end
          k+=1
       end
-  
+      #if value is exist in left side then work
       while l<n1
         arr[k]=left[l]
         k+=1
         l+=1
       end
-      
+       #if value is exist in right side then work
       while r<n2
         arr[k]=right[r]
         k+=1
@@ -88,27 +89,15 @@ class Marge
       print @arr.inspect
       puts
       n = @arr.length - 1
+      #Divide and Conqure start in this point
       sorted_arr = do_partition(@arr, 0, n)
       puts "Sorted array:"
       print sorted_arr
     end
 
 end
-      
     
-      
-      
-        
-      
-      
-      
-          
-      
-      
-      
-      
-
-
-
+#object creation
 m=Marge.new
+#display method call and sorted Array got.
 m.display
