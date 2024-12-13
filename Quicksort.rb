@@ -1,7 +1,7 @@
 
 class Quick 
   attr_accessor :arr
-
+  #initialize and class method
   def initialize
     @arr=to_getArray
   end
@@ -35,12 +35,10 @@ class Quick
 
   #method did quick sort using recursion
   def quicksort(arr,low,high)
-    first=low
-    last=high
+    #unnessary code
     #base condition
-    if first<last
-      part=partition(arr,low,high)
-  
+    if low<high
+      part = partition(arr,low,high)
       quicksort(arr,low,part-1)
       quicksort(arr,part+1,high)
     end
