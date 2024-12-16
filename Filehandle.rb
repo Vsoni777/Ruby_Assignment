@@ -24,4 +24,5 @@
 # puts fileobj
 
 #delete current file which created
-puts (File.delete("file1_new.txt"))
+#return 1 file deleted successfully
+# puts (File.delete("file1_new.txt"))
